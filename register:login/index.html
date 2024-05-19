@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <form action="" id="register" class="form">
+    <h1>Register</h1>
+
+    <input type="email" placeholder="enter your email" required id="regEmail" name="rg">
+    
+    <input type="password" placeholder="set your password" required id="regPass">
+
+    <input type="text" placeholder="set your name" required id="regName">
+    
+    <button type="button" id="regBtn">Register</button>
+  </form>
+
+
+  <div id="logged">
+    <h3>user account: <span id="span">no user yet</span></h3>
+  </div>
+
+
+  <form action="" id="logIn" class="form">
+    <h1>Log In</h1>
+    <input type="email" placeholder="enter your email" id="logEmail">
+    
+    
+    <div>
+      <input type="password" placeholder="enter your password" id="logPass">
+      <p id="warning"></p>
+    </div>
+    
+    <button type="button" id="lgn">Log In</button>
+  </form>
+
+  <script src="./script.js"></script>
+</body>
+</html>

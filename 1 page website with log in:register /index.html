@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="login">
+    <h1>Log In</h1>
+    <input type="email" placeholder="enter your email" id="lgEmail" required>
+    <div>
+      <input type="password" placeholder="enter password" id="lgPass" required>
+      <p  id="warning"></p>
+      <p id="lgWarning"></p>
+      <!-- your password or email is incorrect -->
+      <p id="loginWar"></p>
+      <p class="logp">dont you have an account? <b id="reg">Register</b></p>
+     
+    </div>
+    <button id="lgBtn" type="button">Log In</button>
+  </form>
+
+  <form id="register">
+    <h1>Register</h1>
+    <input type="email" placeholder="enter your email" required id="regGmail">
+    <input type="password" placeholder="set your password" requierd id="regPass">
+    <div>
+      <input type="password" placeholder="confirm your password" id="name">
+      <p id="warning2"></p>
+      <p class="regp">have you alrady Register? <b id="logTxt">Log in</b> your account</p>
+    </div>
+    <button type="button" id="logBtn">Log In</button>
+  </form>
+
+  <header id="header">
+    <h3>Log In website</h3>
+  </header>
+  <br>
+  <div id="webDiv">
+    <h1>welchome to website!</h1>
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+</html>

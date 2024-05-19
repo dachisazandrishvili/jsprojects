@@ -1,0 +1,49 @@
+#trevel_form{
+  height: 400px;
+  width: 300px;
+  border:1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  border-radius: 20px;
+  background-color: darkgray;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,p,h2,h3,h4,h5,h6,button,input{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+
+  #trevel_form input{
+  width: 200px;
+  background-color: black;
+  border-radius: 20px;
+  border:none;
+  color: white;
+  height: 25px;
+  padding-left: 30px;
+}
+
+#frBtn{
+  background-color: rgb(17, 152, 152);
+  width:100px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#warning{
+  font-size: 12px;
+  margin-left: 4px;
+}
