@@ -23,6 +23,8 @@ function User(email,password){
   this.password = password
 }
 
+
+
 // register variables
 
 
@@ -67,13 +69,15 @@ logBtn.addEventListener("click", function(){
     lgWarning.style.color = "red";
 
   }else{
-    accounts.push(new User(regGmail.value,regPass.value));
+    let obj = new User(regGmail.value,regPass.value);
+    accounts.push(obj);
     regGmail.value  = "";
     regPass.value  = "";
     regPass2.value = "";
     lgWarning.value = "";
     regForm.style.display = "none";
     form.style.display = "flex";
+    console.log(accounts)
   }
 })
 
@@ -81,45 +85,55 @@ logBtn.addEventListener("click", function(){
 
 
 
-logTxt.addEventListener("click", function(){
-  if(regGmail.value === "" ){
-    lgWarning.innerHTML = "you forget to enter something"
-    lgWarning.style.color = "red";
+// logTxt.addEventListener("click", function(){
+//   if(regGmail.value === "" ){
+//     lgWarning.innerHTML = "you forget to enter something"
+//     lgWarning.style.color = "red";
 
-  }else if(regPass.value === ""){
-    lgWarning.innerHTML = "you forget to enter something"
-    lgWarning.style.color = "red";
+//   }else if(regPass.value === ""){
+//     lgWarning.innerHTML = "you forget to enter something"
+//     lgWarning.style.color = "red";
 
-  }else if(regPass2.value === ""){
-    lgWarning.innerHTML = "you forget to enter something"
-    lgWarning.style.color = "red";
-  }else if(regPass.value != regPass2.value){
-    lgWarning.innerHTML = "your password is inncorect"
-    lgWarning.style.color = "red";
+//   }else if(regPass2.value === ""){
+//     lgWarning.innerHTML = "you forget to enter something"
+//     lgWarning.style.color = "red";
+//   }else if(regPass.value != regPass2.value){
+//     lgWarning.innerHTML = "your password is inncorect"
+//     lgWarning.style.color = "red";
 
-  }else{
-    accounts.push(new User(regGmail.value,regPass.value));
-    regGmail.placeholder  = "enter your email";
-    regPass.placeholder  = "set your password";
-    regPass2.placeholder = "confirm your password";
-    lgWarning.innerHTML = "";
-    regForm.style.display = "none";
-    form.style.display = "flex";
-  }  
-})
+//   }else{
+//     accounts.push(new User(regGmail.value,regPass.value));
+//     regGmail.placeholder  = "enter your email";
+//     regPass.placeholder  = "set your password";
+//     regPass2.placeholder = "confirm your password";
+//     lgWarning.innerHTML = "";
+//     regForm.style.display = "none";
+//     form.style.display = "flex";
+//   }  
+// })
 
 
 logBtn1.addEventListener("click", function(){
-  for(let i = 0; i < accounts.length; i++){
-    if(accounts[i].email === lgEmail.value & accounts.password[i]=== lgPass.value){
-      form.style.display = "none";
-      regForm.style.display = "none";
-      header.style.display = "flex";
-      main.style.display = "flex";
-
+  if(lgEmail.value === "" || lgPass.value === ""){
+    loginWar.innerHTML = "you forgot to enter something"
+    loginWar.style.color = "red"
+  }else{
+    for(let i = 0; i < accounts.length; i++){
+      if(accounts[i].email === lgEmail.value & accounts[i].password=== lgPass.value){
+        form.style.display = "none";
+        regForm.style.display = "none";
+        header.style.display = "flex";
+        main.style.display = "flex";
+  
+        }else{
+          loginWar.innerHTML = "your email or password may incorrect"
+          loginWar.style.color = "red"
+        }
       }
     }
+
   }
+ 
 
 )
 
