@@ -10,6 +10,8 @@ let form = document.getElementById("trevel_form");
 
 let frBtn = document.getElementById("frBtn");
 
+let shure = document.getElementById("shure");
+
 frBtn.addEventListener("click", function(){
   if(name.value === ""){
     warning.innerHTML = "you forget to enter something";
@@ -17,12 +19,12 @@ frBtn.addEventListener("click", function(){
   }else if(age.value === ""){
     warning.innerHTML = "you forget to enter something";
     warning.style.color = "red";
-  }else if(trevel.value === ""){
-    warning.innerHTML = "you forget to enter something";
-    warning.style.color = "red";
   }else{
     form.style.display = "none";
-  
+    shure.style.display = "flex";
   }
 
 })
+
+
+// choise variables
