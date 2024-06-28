@@ -11,6 +11,7 @@ let regForm = document.getElementById("register");
 
 let loginWar = document.getElementById("loginWar");
 // adding event listener to
+
 reg.addEventListener("click", function(){
   form.style.display = "none";
   regForm.style.display = "flex";
