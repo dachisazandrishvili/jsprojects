@@ -173,7 +173,10 @@ let crrDvv = document.getElementById("crrDvv");
 let img = document.getElementsByClassName("img");
 let counter = 0;
 
+let total = document.getElementById("ttl");
+
 let ctt = document.getElementById("ctt");
+let priceLst = []
 for(let i = 0; i < btnc.length; i++){
   btnc[i].addEventListener("click",function(){
     counter += 1
@@ -219,14 +222,67 @@ for(let i = 0; i < btnc.length; i++){
     buyBtn.style.cursor = "pointer";
     divv.style.backgroundColor = "whitesmoke"
     divv.appendChild(buyBtn);
+    let clearOne = document.createElement("div");
+    clearOne.style.height = "15px";
+    clearOne.style.width = "15px";
+    clearOne.style.borderRadius = "50%";
+    clearOne.style.backgroundColor = "red";
+    clearOne.style.position = "relative";
+    clearOne.innerHTML = "X";
+    clearOne.style.display = "flex";
+    clearOne.style.justifyContent = "center";
+    clearOne.style.alignItems = "center";
+    clearOne.style.fontFamily = "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+    clearOne.style.left = "30px";
+    clearOne.style.bottom = "43px";
+    clearOne.style.color = "white";
+    clearOne.style.fontStyle = "bold";
+    clearOne.style.fontSize = "11px";
+    clearOne.style.cursor = "pointer";
+    clearOne.addEventListener("click",function(){
+      clearOne.parentElement.style.display = "none";
+      counter--
+      cartP.innerHTML = counter;
+      if(Number(cartP.innerHTML) < 1){
+        crrDvv.style.display = "none"
+      }
+    })
+    divv.appendChild(clearOne)
+    
+    let lst = []
+    for(let i = 1; i < Pricce.innerHTML.length; i++){
+      lst.push(Pricce.innerHTML[i])
+    }
+    let totalNum = 0;
+    let totalStr = ""
+    for(let i = 0; i < lst.length; i++){
+      totalStr += lst[i]
+      
+      
+    }
+    priceLst.push(totalStr)
+    let tttCount = 0;
+    for(let i = 0; i < priceLst.length; i++){
+      tttCount += Number(priceLst[i])
+      
+    }
+    console.log(tttCount)
+    total.innerHTML = "$" + tttCount;
     document.getElementById("x").addEventListener("click",function(){
-      divv.style.display = "none"
-      counter = 0;
-      crrDvv.style.display = "none";
-      cc.style.display = "none";
+      cc.style.display = "none"
     })
   })
 }
+
+// width: 15px;
+//   height: 15px;
+//   border-radius: 50%;
+//   background-color: orange;
+//   position: relative;
+//   right: 0.4px;
+//   top: 6px;
+//   display: none;
+// }
 
 let h1 = document.getElementById("h1");
 let pr = document.getElementById("pr");
@@ -312,4 +368,7 @@ document.getElementById("carrt").addEventListener("click",function(){
   ctt.style.display = "flex";
   cc.style.flexDirection = "column";
 })
+
+
+
 

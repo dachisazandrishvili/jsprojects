@@ -356,6 +356,7 @@ main{
     /* transform: translateY(-25px); */
     background-color:#4C5A4F;
     opacity: 0.6;
+
   }
   
 }
@@ -543,7 +544,7 @@ main img{
   border: 1px solid black;
 }
 #cj div{
-  width: auto;
+  width: 15px;
   height: 15px;
   border-radius: 20px;
   border:2px solid red;
@@ -572,4 +573,18 @@ main img{
 #cc{
   border-radius: 20px;
   display: none;
+}
+
+#buyAll{
+  background-color: orange;
+  width: 100px;
+  height: 40px;
+  border:none;
+  border-radius: 20px;
+
+}
+#ttt{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
