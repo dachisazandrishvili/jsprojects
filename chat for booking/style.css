@@ -1,0 +1,48 @@
+body{
+  height: 96vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#chat{
+  height:96vh;
+  width: 160vh;
+  border:1px solid black;
+  border-radius: 35px;
+  display: grid;
+  grid-template-rows: repeat(10,auto);
+  gap:5px;
+  position: relative;
+}
+#mesageArea{
+  grid-row-start: 2;
+  grid-row-end: 10;
+  background-color: whitesmoke;
+}
+.m{
+  background-color: rgb(26, 26, 142);
+  border-radius: 35px;
+}
+#end input{
+  width: 100vh;
+  height: 5vh;
+  border:none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#end{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#end button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}

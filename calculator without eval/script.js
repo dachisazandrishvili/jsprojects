@@ -10,6 +10,8 @@ let numStr = "";
  
 let result 
 
+
+
 for(let i = 0; i < button.length; i++){
   button[i].addEventListener("click", function(){
     
@@ -41,15 +43,29 @@ for(let i = 0; i < button.length; i++){
 }
 
 equal.addEventListener("click", function(){
-  // numArr.push(numStr);
-  // console.log(numArr);
-  // console.log(numArr.length)
-  // for(let i = 0; i < numArr.length; i++){
-  //   console.log(numArr[i])
-  // }
-  console.log(numArr[0])
+  
+  var s = ""
+  var s2 = ""
+  for(i of numArr){ 
+    s += i
+  }
+  
+  let h = []
+  for(i of s){
+    h.push(i)
+  }
+  h.pop()
+  for(i of h){
+    s2 += i
+  }
+  console.log(eval(s2))
+  sum.innerHTML = eval(s2);
+  numArr = []
+  s2 = ""
+  numStr = ""
   
 })
+
 
 // let newArr = [];
 // newArr.push("")
