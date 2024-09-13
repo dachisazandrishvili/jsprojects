@@ -41,40 +41,17 @@ btn.addEventListener("click",function(){
         lstt.push(i)
     }
     let lll = []
-    for(let i of serchLst2){
-        for(let m of i){
-            for(let c = 0; c < lstt.length; c++){
-            
-                if(m === lstt[c]){
-                    count += 1
-                }
-                lll.push(count)
-                
-            }
+    for(let i of serchLst){
+        if(i != m){
+            serchLst1[serchLst.indexOf(i)].style.visibility = "hidden";
+        }else{
+            serchLst1[serchLst.indexOf(i)].style.visibility = "visible";
         }
         
     }
+  
     console.log(lll)
-    // let loops = "";
-    // for(i of lstt){
-    //     loops += 1;
-    // }
-    // for(i of serchLst2){
-    //     for(k of i){
-    //         for(x of lstt){
-    //             if(i === x){
-    //                 lstt2.push(i)
-    //             }
-    //         }
-    //     }
-        
-    // }
-    // if(loopStr === loops){
-    //     lstt2.push(loopStr)
-    //     lstt2.push(true)
-    // }else{
-    //     lstt2.push(false)
-    // }
+    
     
 })
 
